@@ -1,3 +1,15 @@
+"""  
+Copyright (c) [2025] [Ye Zhiwei]  Dalian University of Technology
+All rights reserved.  
+
+This file is part of Deep recongnition of Moleculer fluorescence.  
+
+This code is licensed under the [MIT] 
+You may not use this file except in compliance with the License.   
+
+"""  
+
+
 import tkinter as tk  
 from tkinter import filedialog, ttk, messagebox 
 import pandas as pd  
