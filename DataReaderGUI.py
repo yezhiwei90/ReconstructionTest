@@ -161,10 +161,13 @@ class DataLoaderApp:
         if savepath:
             #print("Shape of the array:", self.reconstimg.shape)  # Prints the dimensions  
             #print(savepath)
+            #print("Shape of the array:",  self.reconstimg.shape)  
+            self.reconstimg = self.reconstimg.transpose(1,0,2)
+            #print("Shape of the array after transpose:",  self.reconstimg.shape)  
             for index in range(self.reconstimg.shape[2]):
                 crsavepath = savepath[:-4] + str(index) + savepath[-4:]
                 tiff.imwrite(crsavepath, self.reconstimg[:,:,index])  
-                #print("Successfully write reconstruction to file!")
+            print("Successfully write reconstruction to file!")
         else:
             print("No save path is defined!")
 
